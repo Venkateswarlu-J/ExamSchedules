@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exam Countdown Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>📚 Exam Countdown</h1>
+    <p class="subtitle">Track your exams. Stay ahead.</p>
+  </header>
+
+  <main>
+
+    <!-- Add Exam Form -->
+    <section class="form-section">
+      <h2>Add New Exam</h2>
+      <div class="form-group">
+        <label for="examName">Exam Name</label>
+        <input type="text" id="examName" placeholder="e.g. DBMS Internal" />
+      </div>
+      <div class="form-group">
+        <label for="examDate">Exam Date</label>
+        <input type="date" id="examDate" />
+      </div>
+      <button onclick="addExam()">+ Add Exam</button>
+      <p id="errorMsg" class="error"></p>
+    </section>
+
+    <!-- Legend -->
+    <section class="legend">
+      <span class="badge red">🔴 Urgent (&lt; 3 days)</span>
+      <span class="badge yellow">🟡 Soon (3–7 days)</span>
+      <span class="badge green">🟢 Plenty of time (&gt; 7 days)</span>
+    </section>
+
+    <!-- Exam Cards -->
+    <section class="dashboard" id="dashboard">
+      <!-- Cards injected by JS -->
+    </section>
+
+    <p id="emptyMsg" class="empty-msg">No exams added yet. Add your first exam above!</p>
+
+  </main>
+
+  <footer>
+    <p>Data saved locally on your device. No login needed.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
